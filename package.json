@@ -83,7 +83,7 @@
     "**/*.+(js|jsx|md|ts|css|sass|less|graphql|yml|yaml|scss)": [
       "eslint --fix",
       "prettier --write",
-      "test:nowatch",
+      "yarn test:nowatch",
       "git add"
     ]
   }
