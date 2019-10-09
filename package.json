@@ -45,6 +45,23 @@
       "pre-commit": "yarn precommit"
     }
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.1.1",
     "@testing-library/react": "^9.3.0",
@@ -62,10 +79,9 @@
     "typescript": "^3.6.3"
   },
   "lint-staged": {
-    "**/*.+(js|jsx|md|ts|css|sass|less|graphql|yml|yaml|scss|json|)": [
+    "**/*.+(js|jsx|md|ts|css|sass|less|graphql|yml|yaml|scss)": [
       "eslint --fix",
       "prettier --write",
-      "jest --findRelatedTests",
       "git add"
     ]
   }

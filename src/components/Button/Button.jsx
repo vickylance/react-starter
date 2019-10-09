@@ -3,11 +3,7 @@ import ButtonStyled from './Button.style';
 import { defaultProps, propTypes } from './Button.props';
 
 const Button = ({ text }) => {
-  return (
-    <div>
-      <button type="button">{text}</button>
-    </div>
-  );
+  return <ButtonStyled type="button">{text}</ButtonStyled>;
 };
 
 Button.defaultProps = defaultProps;
