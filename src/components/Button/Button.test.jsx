@@ -5,7 +5,7 @@ import Button from './Button';
 
 describe('render button', () => {
   it('shows the text in the button', () => {
-    const testMessage = 'Yolo';
+    const testMessage = 'Yolo 2';
     const { getByText } = render(<Button text={testMessage} />);
     expect(getByText(testMessage)).toBeInTheDocument();
   });
